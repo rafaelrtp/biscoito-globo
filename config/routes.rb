@@ -1,7 +1,7 @@
 BiscoitoGlobo::Application.routes.draw do
-  root to: 'home#index'
+  resources :news
 
-  get "home/index"
+  root to: 'news#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
