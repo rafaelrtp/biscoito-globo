@@ -1,0 +1,30 @@
+
+development:
+  adapter: postgresql
+  database: biscoito-globo_development
+  host: localhost
+  user: postgres
+  password:
+  pool: 5
+  timeout: 5000
+  template: template0
+
+test: &test
+  adapter: postgresql
+  database: biscoito-globo_test
+  host: localhost
+  user: postgres
+  password:
+  pool: 5
+  timeout: 5000
+  template: template0
+
+production:
+  adapter: postgresql
+  database: biscoito-globo_production
+  host: localhost
+  user: postgres
+  password:
+  pool: 5
+  timeout: 5000
+  template: template0
