@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b>Título:</b>
   <%= @news.title %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Descrição:</b>
   <%= @news.description %>
 </p>
 
 <p>
-  <b>Content:</b>
+  <b>Conteúdo:</b>
   <%= simple_format(@news.content) %>
 </p>
 
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<%= link_to 'Editar', edit_news_path(@news) %> |
+<%= link_to 'Voltar', news_index_path %>

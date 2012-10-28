@@ -1,3 +1,4 @@
+
 <%= form_for(@news) do |f| %>
   <% if @news.errors.any? %>
     <div id="error_explanation">
@@ -12,17 +13,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= f.label :title, class: 'span2' %>
+    <%= f.text_field :title, class: 'span10' %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.label :description, class: 'span2' %>
+    <%= f.text_field :description, class: 'span10' %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
+    <%= f.label :content, class: 'span2' %>
+    <%= f.text_area :content, class: 'span10' %>
   </div>
+<div class="span2"></div>
   <div class="actions">
     <%= f.submit %>
   </div>
