@@ -1,5 +1,4 @@
-
-<%= form_for(@news) do |f| %>
+<%= form_for(@news, url: @url) do |f| %>
   <% if @news.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@news.errors.count, "erro impediu", "erros impediram") %> essa notícia de ser salva:</h2>
@@ -26,6 +25,6 @@
   </div>
 <div class="span2"></div>
   <div class="actions">
-    <%= f.submit 'Criar Notícia', class: 'btn btn-primary' %>
+    <%= f.submit 'Salvar', class: 'btn btn-primary' %>
   </div>
 <% end %>

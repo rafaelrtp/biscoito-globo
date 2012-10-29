@@ -27,6 +27,7 @@ class Admin::NewsController < ApplicationController
   # GET /news/new.json
   def new
     @news = News.new
+    @url = admin_news_index_path
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,17 +38,19 @@ class Admin::NewsController < ApplicationController
   # GET /news/1/edit
   def edit
     @news = News.find(params[:id])
+    @url = admin_news_path(@news)
   end
 
   # POST /news
   # POST /news.json
   def create
     @news = News.new(params[:news])
+    @url = admin_news_index_path
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to @news, notice: 'Notícia criada com sucesso.' }
-        format.json { render json: @news, status: :created, location: @news }
+        format.html { redirect_to admin_news_path(@news), notice: 'Notícia criada com sucesso.' }
+        format.json { render json: admin_news_path(@news), status: :created, location: admin_news_path(@news) }
       else
         format.html { render action: "new" }
         format.json { render json: @news.errors, status: :unprocessable_entity }
@@ -59,10 +62,11 @@ class Admin::NewsController < ApplicationController
   # PUT /news/1.json
   def update
     @news = News.find(params[:id])
+    @url = admin_news_path(@news)
 
     respond_to do |format|
       if @news.update_attributes(params[:news])
-        format.html { redirect_to @news, notice: 'Notícia foi atualizada com sucesso.' }
+        format.html { redirect_to admin_news_path(@news), notice: 'Notícia foi atualizada com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -78,7 +82,7 @@ class Admin::NewsController < ApplicationController
     @news.destroy
 
     respond_to do |format|
-      format.html { redirect_to news_index_url }
+      format.html { redirect_to admin_news_index_path }
       format.json { head :no_content }
     end
   end
