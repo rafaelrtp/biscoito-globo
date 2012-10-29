@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class NewsController < ApplicationController
   # GET /news
   # GET /news.json
@@ -44,7 +46,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to @news, notice: 'News was successfully created.' }
+        format.html { redirect_to @news, notice: 'Notícia criada com sucesso.' }
         format.json { render json: @news, status: :created, location: @news }
       else
         format.html { render action: "new" }
@@ -60,7 +62,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       if @news.update_attributes(params[:news])
-        format.html { redirect_to @news, notice: 'News was successfully updated.' }
+        format.html { redirect_to @news, notice: 'Notícia foi atualizada com sucesso.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
