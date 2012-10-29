@@ -20,17 +20,17 @@
     <td>
 	<div class="btn-group">
 
-	<a href="<%= news_path(news) %>" class="btn btn-small">
+	<a href="<%= admin_news_path(news) %>" class="btn btn-small">
 		<i class="icon-zoom-in"></i> Visualizar
 	</a> <!-- Exatamente o mesmo link só que escrito em HTML -->
 	
-	<!-- <%= link_to news, class: 'btn btn-small' do %>
+	<!-- <%= link_to new_admin_news_path(news), class: 'btn btn-small' do %>
 		<i class="icon-user"></i> Visualizar
-	<% end %> -->
-    <%= link_to edit_news_path(news), class: 'btn btn-small' do %>
+	<% end %> -->w
+    <%= link_to edit_admin_news_path(news), class: 'btn btn-small' do %>
 		<i class="icon-edit"></i> Editar
 	<% end %>
-    <%= link_to news, method: :delete, class: 'btn btn-small', data: { confirm: 'Are you sure?' } do %>
+    <%= link_to admin_news_path(news), method: :delete, class: 'btn btn-small', data: { confirm: 'Are you sure?' } do %>
 		<i class="icon-remove"></i> Deletar
 	<% end %>
 	</div>
@@ -41,4 +41,4 @@
 
 <br />
 
-<%= link_to 'Adicionar Notícia', new_news_path, class: 'btn btn-primary' %>
+<%= link_to 'Adicionar Notícia', new_admin_news_path, class: 'btn btn-primary' %>

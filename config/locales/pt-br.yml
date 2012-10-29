@@ -204,6 +204,11 @@ pt-BR:
     errors:
       <<: *errors
   activerecord:
+    attributes:
+        news:
+            title: Título
+            description: Descrição
+            content: Conteúdo
     errors:
       <<: *errors
   views:

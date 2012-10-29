@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class NewsController < ApplicationController
+class Admin::NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index

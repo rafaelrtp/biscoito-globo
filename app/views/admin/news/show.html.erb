@@ -1,0 +1,26 @@
+<% if notice %>
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+	<%= notice %>
+</div>
+<% end %>
+
+<p>
+  <b>Título:</b>
+  <%= @news.title %>
+</p>
+
+<p>
+  <b>Descrição:</b>
+  <%= @news.description %>
+</p>
+
+<p>
+  <b>Conteúdo:</b>
+  <%= simple_format(@news.content) %>
+</p>
+
+<div class="btn-group">
+	<%= link_to 'Editar', edit_admin_news_path(@news), class: 'btn' %> |
+	<%= link_to 'Voltar', admin_news_index_path, class: 'btn' %>
+</div>
