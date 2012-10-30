@@ -1,9 +1,12 @@
 BiscoitoGlobo::Application.routes.draw do
+  
+  resources :news
+
   namespace :admin do
     resources :news
   end
 
-  root to: 'home#index'
+  root to: 'news#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,10 @@
+<% @news.each do |news| %>
+	<ul>
+		<li>
+			<%= link_to news do %>
+			<%= news.title %>
+			<% end %>
+		</li>
+	</ul>
+<% end %>
+ 
